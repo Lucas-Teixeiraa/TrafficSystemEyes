@@ -11,6 +11,7 @@ public class Sensor {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID sensorID;
+
     private String localizacao;
     private String status;
     private Date dataInstalacao;

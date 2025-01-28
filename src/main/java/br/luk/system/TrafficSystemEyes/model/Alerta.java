@@ -8,6 +8,11 @@ public class Alerta {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID alertaID;
+
+    @ManyToOne
+    @JoinColumn(name = "sensorID",nullable = false)
+    private Sensor sensor;
+
     private String tipo;
     private String descricao;
     private Date dataGeracao;

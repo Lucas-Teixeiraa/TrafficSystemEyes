@@ -11,8 +11,13 @@ public class Veiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID veiculoID;
+
     private String placa;
     private double velocidade;
+
+    @ManyToOne
+    @JoinColumn(name = "sensorID",nullable = false)
+    private Sensor sensor;
 
 
 }
